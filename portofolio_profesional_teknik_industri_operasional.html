@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional | Teknik Industri & Operasional</title>
+    <meta name="description" content="Portofolio Profesional S1 Teknik Industri dengan fokus pada Supply Chain, Logistik, Production Planning, dan Operational Improvement di industri manufaktur & otomotif.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#2563eb',
+                            600: '#1d4ed8',
+                            700: '#1e40af',
+                            900: '#0f172a',
+                            accent: '#06b6d4',
+                            emerald: '#10b981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0f19;
+            color: #e2e8f0;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 50%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-border {
+            border-image: linear-gradient(to right, #2563eb, #06b6d4) 1;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card:hover {
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-[#0b0f19] text-slate-200 antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#0b0f19]/80 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand / Name -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center font-bold text-white text-lg shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-transform">
+                        TI
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-slate-100 text-sm sm:text-base leading-snug tracking-tight">Profesional Portofolio</span>
+                        <span class="text-[11px] text-slate-400">Teknik Industri &amp; Operasional</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-1 lg:gap-2 text-sm font-medium">
+                    <a href="#about" class="px-3 py-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Tentang</a>
+                    <a href="#experience" class="px-3 py-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Pengalaman</a>
+                    <a href="#projects" class="px-3 py-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Proyek</a>
+                    <a href="#certifications" class="px-3 py-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Sertifikasi</a>
+                    <a href="#skills" class="px-3 py-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-800/60 transition">Keterampilan</a>
+                    <a href="#contact" class="ml-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold transition shadow-md shadow-blue-600/30 flex items-center gap-2">
+                        <i class="fa-solid me-1 fa-paper-plane text-xs"></i> Kontak
+                    </a>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none" aria-label="Buka Menu">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-2">
+            <a href="#about" class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Tentang Saya</a>
+            <a href="#experience" class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Pengalaman Kerja</a>
+            <a href="#projects" class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Proyek Unggulan</a>
+            <a href="#certifications" class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Pendidikan & Sertifikasi</a>
+            <a href="#skills" class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Keterampilan Kunci</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium bg-blue-600 text-white text-center">Hubungi & Rekrut</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+
+        <!-- Hero Section -->
+        <section id="hero" class="relative py-16 sm:py-24 lg:py-28 overflow-hidden">
+            <!-- Glow background decoration -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/15 blur-[120px] rounded-full pointer-events-none"></div>
+            <div class="absolute top-1/3 right-10 w-72 h-72 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Text Info Column -->
+                    <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950/80 border border-blue-800/60 text-blue-300 text-xs sm:text-sm font-medium">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            Siap Bekerja &bull; Manufaktur, Supply Chain &amp; Logistik
+                        </div>
+
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                            Kandidat Teknik Industri <br>
+                            <span class="gradient-text">Spesialis Operasional &amp; Supply Chain</span>
+                        </h1>
+
+                        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                            Lulusan S1 Teknik Industri (IPK 3,38) UPN "Veteran" Yogyakarta dengan pengalaman kerja nyata di manufaktur otomotif, pengoperasian Kanban &amp; WMS, pengendalian dokumen, serta perbaikan proses berbasis VSM &amp; JSA.
+                        </p>
+
+                        <!-- Call to Action Buttons -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#projects" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-semibold text-sm sm:text-base shadow-lg shadow-blue-600/25 transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                                <i class="fa-solid fa-layer-group"></i> Lihat Proyek Unggulan
+                            </a>
+                            <a href="CV_Kiki Prasetyadi.pdf" target="_blank" download class="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold text-sm sm:text-base transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                                <i class="fa-solid fa-file-arrow-down text-blue-400"></i> Unduh CV (PDF)
+                            </a>
+                        </div>
+
+                        <!-- Highlights Banner Grid -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6 border-t border-slate-800/80">
+                            <div class="p-3.5 rounded-lg bg-slate-900/60 border border-slate-800">
+                                <div class="text-xl sm:text-2xl font-bold text-blue-400">35,85%</div>
+                                <div class="text-xs text-slate-400 font-medium mt-0.5">Efisiensi Waktu (VSM)</div>
+                            </div>
+                            <div class="p-3.5 rounded-lg bg-slate-900/60 border border-slate-800">
+                                <div class="text-xl sm:text-2xl font-bold text-cyan-400">300+ Box/Hari</div>
+                                <div class="text-xs text-slate-400 font-medium mt-0.5">Picking &amp; Kanban WMS</div>
+                            </div>
+                            <div class="p-3.5 rounded-lg bg-slate-900/60 border border-slate-800 col-span-2 sm:col-span-1">
+                                <div class="text-xl sm:text-2xl font-bold text-emerald-400">54 Potensi</div>
+                                <div class="text-xs text-slate-400 font-medium mt-0.5">Bahaya Teridentifikasi (JSA)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Image / Visual Card Column -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-md">
+                            <!-- Background Accent Frame -->
+                            <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 opacity-30 blur-lg"></div>
+                            
+                            <!-- Main Visual Container -->
+                            <div class="relative rounded-2xl bg-slate-900 border border-slate-800 p-4 shadow-2xl overflow-hidden">
+                                <div class="aspect-[4/5] rounded-xl bg-slate-800 relative overflow-hidden flex items-center justify-center">
+                                    <!-- Profil Image Fallback -->
+                                    <img src="Profil.png" alt="Foto Profil Kandidat Teknik Industri" class="w-full h-full object-cover object-center" onerror="this.onerror=null; this.src='https://placehold.co/400x500/1e293b/94a3b8?text=Foto+Profil+Kandidat';">
+                                    
+                                    <!-- Overlay Badge -->
+                                    <div class="absolute bottom-3 left-3 right-3 p-3 rounded-lg bg-slate-900/90 backdrop-blur-md border border-slate-700/80 text-xs">
+                                        <div class="flex items-center justify-between">
+                                            <span class="font-semibold text-white">S1 Teknik Industri</span>
+                                            <span class="text-emerald-400 font-bold">IPK 3,38</span>
+                                        </div>
+                                        <div class="text-slate-400 text-[11px] mt-0.5">UPN "Veteran" Yogyakarta</div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 pt-2 flex items-center justify-between text-xs text-slate-400 border-t border-slate-800">
+                                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-industry text-blue-400"></i> Manufaktur</span>
+                                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-truck-ramp-box text-cyan-400"></i> Supply Chain</span>
+                                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-400"></i> K3 &amp; JSA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-16 bg-slate-900/40 border-y border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center space-y-4">
+                    <h2 class="text-xs font-bold tracking-widest text-blue-400 uppercase">Profil Profesional</h2>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white">Latar Belakang &amp; Komitmen Karir</h3>
+                    <div class="w-12 h-1 bg-blue-500 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="mt-10 max-w-4xl mx-auto">
+                    <div class="glass-card p-6 sm:p-8 rounded-2xl space-y-4 text-slate-300 leading-relaxed text-sm sm:text-base">
+                        <p>
+                            Saya adalah lulusan <strong class="text-white">S1 Teknik Industri dari UPN "Veteran" Yogyakarta (IPK 3,38)</strong> yang memadukan pemahaman teori akademis sistem integral dengan pengalaman operasional langsung di lapangan manufaktur.
+                        </p>
+                        <p>
+                            Pengalaman kerja di lini produksi dan logistik otomotif seperti di <strong class="text-white">PT Sugity Creatives</strong> dan <strong class="text-white">PT Armindo Jaya Mandiri</strong> membekali saya dengan kecakapan praktis dalam penjadwalan pengiriman multi-SKU berbasis Excel, sistem pengoperasian Kanban, pengelolaan WMS dengan barcode scanner, hingga identifikasi keselamatan kerja berbasis Job Safety Analysis (JSA).
+                        </p>
+                        <p>
+                            Fokus minat profesional saya berpusat pada area <span class="text-blue-300 font-semibold">Supply Chain Management, Logistik, Production Planning &amp; Inventory Control (PPIC), serta Operational Continuous Improvement</span>. Saya terbiasa menganalisis proses secara kuantitatif berbasis data untuk menghilangkan pemborosan (waste) dan meningkatkan efisiensi operasional perusahaan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="experience" class="py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center space-y-3 mb-14">
+                    <h2 class="text-xs font-bold tracking-widest text-blue-400 uppercase">Rekam Jejak Karir</h2>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white">Pengalaman Kerja &amp; Magang</h3>
+                    <p class="text-slate-400 text-sm">Diurutkan berdasarkan riwayat terbaru di lingkungan operasional manufaktur &amp; industri.</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto relative border-l-2 border-slate-800 pl-4 sm:pl-8 space-y-10">
+
+                    <!-- Experience 1: PT Sugity Creatives -->
+                    <div class="relative group">
+                        <!-- Timeline Dot -->
+                        <div class="absolute -left-[21px] sm:-left-[37px] top-1.5 w-4 h-4 rounded-full bg-blue-500 border-4 border-[#0b0f19] group-hover:scale-125 transition-transform"></div>
+
+                        <div class="glass-card p-6 rounded-2xl transition duration-300">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white group-hover:text-blue-400 transition">PC Delivery Operator (Contract)</h4>
+                                    <div class="text-blue-300 font-medium text-sm">PT Sugity Creatives</div>
+                                </div>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-950 text-blue-300 border border-blue-800/50 w-fit">
+                                    <i class="fa-regular fa-calendar me-1.5"></i> Okt 2020 – Okt 2021
+                                </span>
+                            </div>
+
+                            <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside marker:text-blue-500">
+                                <li>Menyusun jadwal pengiriman 6 SKU bumper hingga 12 cycle berdasarkan pesanan pelanggan menggunakan Microsoft Excel secara presisi.</li>
+                                <li>Melakukan picking dan matching berbasis Kanban untuk 20+ jenis produk, menagani volume 300+ box per hari dengan tingkat kesalahan konsisten ditekan hingga sebesar 2%.</li>
+                                <li>Memverifikasi 300+ Kanban per hari menggunakan Warehouse Management System (WMS) dan barcode scanner.</li>
+                                <li>Berkoordinasi aktif dengan pengemudi armada logistik serta menyiapkan seluruh dokumen pengiriman resmi secara akurat.</li>
+                            </ul>
+
+                            <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-xs text-slate-300">Kanban System</span>
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-xs text-slate-300">WMS & Barcode Scanner</span>
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-xs text-slate-300">Excel Delivery Scheduling</span>
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-xs text-slate-300">Picking & Matching</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2: PT Armindo Jaya Mandiri -->
+                    <div class="relative group">
+                        <!-- Timeline Dot -->
+                        <div class="absolute -left-[21px] sm:-left-[37px] top-1.5 w-4 h-4 rounded-full bg-cyan-500 border-4 border-[#0b0f19] group-hover:scale-125 transition-transform"></div>
+
+                        <div class="glass-card p-6 rounded-2xl transition duration-300">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white group-hover:text-cyan-400 transition">Document Control Intern</h4>
+                                    <div class="text-cyan-300 font-medium text-sm">PT Armindo Jaya Mandiri</div>
+                                </div>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950 text-cyan-300 border border-cyan-800/50 w-fit">
+                                    <i class="fa-regular fa-calendar me-1.5"></i> Jan 2025 – Feb 2025
+                                </span>
+                            </div>
+
+                            <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside marker:text-cyan-500">
+                                <li>Mengelola, mengarsipkan, dan memverifikasi kelengkapan dokumen teknis Drawing manufaktur secara terstruktur.</li>
+                                <li>Melakukan observasi lapangan langsung pada proses produksi serta menyusun Job Safety Analysis (JSA).</li>
+                                <li>Mengidentifikasi 54 potensi bahaya keselamatan kerja dan menyusun rekomendasi pengendalian konkret berbasis matriks risiko K3.</li>
+                            </ul>
+
+                            <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-xs text-slate-300">Document Control</span>
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-xs text-slate-300">Drawing Verification</span>
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-xs text-slate-300">Job Safety Analysis (JSA)</span>
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-xs text-slate-300">Risk Matrix Assessment</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3: PT Denso Indonesia -->
+                    <div class="relative group">
+                        <!-- Timeline Dot -->
+                        <div class="absolute -left-[21px] sm:-left-[37px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-[#0b0f19] group-hover:scale-125 transition-transform"></div>
+
+                        <div class="glass-card p-6 rounded-2xl transition duration-300">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white group-hover:text-blue-400 transition">General Affair Intern</h4>
+                                    <div class="text-slate-300 font-medium text-sm">PT Denso Indonesia</div>
+                                </div>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700 w-fit">
+                                    <i class="fa-regular fa-calendar me-1.5"></i> Feb 2019 – Mei 2019
+                                </span>
+                            </div>
+
+                            <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside marker:text-slate-500">
+                                <li>Membantu administrasi pengelolaan fasilitas operasional, pendataan seragam dan loker karyawan, serta dokumen internal perusahaan.</li>
+                                <li>Mengoordinasikan kelancaran distribusi dokumen antarplant dan penyediaan kebutuhan armada shuttle perusahaan.</li>
+                            </ul>
+
+                            <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-xs text-slate-300">Facility Administration</span>
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-xs text-slate-300">Inter-plant Distribution</span>
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-xs text-slate-300">Asset & Locker Data</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 4: PT Shinsei Denshi Indonesia -->
+                    <div class="relative group">
+                        <!-- Timeline Dot -->
+                        <div class="absolute -left-[21px] sm:-left-[37px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-[#0b0f19] group-hover:scale-125 transition-transform"></div>
+
+                        <div class="glass-card p-6 rounded-2xl transition duration-300">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white group-hover:text-blue-400 transition">Quality Control Intern</h4>
+                                    <div class="text-slate-300 font-medium text-sm">PT Shinsei Denshi Indonesia</div>
+                                </div>
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700 w-fit">
+                                    <i class="fa-regular fa-calendar me-1.5"></i> Jul 2018 – Des 2018
+                                </span>
+                            </div>
+
+                            <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside marker:text-slate-500">
+                                <li>Melakukan inspeksi komponen elektronik dan Printed Circuit Board (PCB) berdasarkan standar kriteria kualitas mutu perusahaan.</li>
+                                <li>Menerapkan prinsip 5S secara konsisten di area kerja serta menangani prosedur pemindahan produk berstatus OK.</li>
+                            </ul>
+
+                            <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-xs text-slate-300">Quality Inspection</span>
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-xs text-slate-300">PCB & Electronic Inspection</span>
+                                <span class="px-2.5 py-1 rounded bg-slate-800 text-xs text-slate-300">5S Implementation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 sm:py-24 bg-slate-900/30 border-y border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center space-y-3 mb-12">
+                    <h2 class="text-xs font-bold tracking-widest text-blue-400 uppercase">Studi Kasus &amp; Implementasi</h2>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white">Proyek Analisis &amp; Perbaikan Proses</h3>
+                    <p class="text-slate-400 text-sm">Proyek terukur berbasis metodologi pemodelan, keselamatan kerja, dan analisis keputusan kuantitatif.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                    <!-- Project 1: VSM & ProModel -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden border border-blue-500/30">
+                        <div class="absolute top-0 right-0 px-4 py-1.5 bg-gradient-to-l from-blue-600 to-cyan-600 text-white text-xs font-extrabold rounded-bl-xl shadow-md">
+                            HIGHLIGHT PROYEK
+                        </div>
+
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-chart-line text-lg"></i>
+                            </div>
+
+                            <h4 class="text-lg font-bold text-white mb-2 leading-snug">
+                                Perbaikan Proses Produksi Berbasis VSM &amp; Simulasi ProModel
+                            </h4>
+
+                            <!-- Main Impact Badge -->
+                            <div class="my-4 p-4 rounded-xl bg-gradient-to-r from-blue-950/80 to-slate-900 border border-blue-800/60 text-center">
+                                <span class="text-xs text-slate-400 font-medium block">Pengurangan Waktu Aktivitas</span>
+                                <span class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">35,85%</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">(Dari 25.430 detik &rarr; 16.315 detik)</span>
+                            </div>
+
+                            <div class="space-y-2 text-xs sm:text-sm text-slate-300">
+                                <p><strong class="text-white">Metode:</strong> Menganalisis lintasan produksi dengan Value Stream Mapping (VSM) dan mensimulasikan skenario usulan melalui ProModel.</p>
+                                <p><strong class="text-white">Verifikasi Data:</strong> Pengujian statistik dilakukan menggunakan IBM SPSS untuk memastikan signifikansi hasil analisis.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-800 flex flex-wrap gap-1.5">
+                            <span class="px-2 py-0.5 rounded bg-blue-950 text-blue-300 text-xs">VSM</span>
+                            <span class="px-2 py-0.5 rounded bg-blue-950 text-blue-300 text-xs">ProModel</span>
+                            <span class="px-2 py-0.5 rounded bg-blue-950 text-blue-300 text-xs">IBM SPSS</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Job Safety Analysis (JSA) -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-cyan-600/20 text-cyan-400 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-triangle-exclamation text-lg"></i>
+                            </div>
+
+                            <h4 class="text-lg font-bold text-white mb-2 leading-snug">
+                                Job Safety Analysis (JSA) Unit Produksi Pertashop
+                            </h4>
+
+                            <!-- Impact Highlight -->
+                            <div class="my-4 p-4 rounded-xl bg-slate-900 border border-slate-800 text-center">
+                                <span class="text-xs text-slate-400 font-medium block">Hasil Identifikasi K3</span>
+                                <span class="text-2xl font-bold text-cyan-400">54 Potensi Bahaya</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Lengkap dengan Matriks Penilaian Risiko</span>
+                            </div>
+
+                            <div class="space-y-2 text-xs sm:text-sm text-slate-300">
+                                <p><strong class="text-white">Konteks:</strong> Identifikasi potensi bahaya keselamatan kerja di unit manufaktur produksi Pertashop.</p>
+                                <p><strong class="text-white">Metode:</strong> Penilaian risiko terstruktur berdasarkan kemungkinan (likelihood), keparahan (severity), serta penyusunan hirarki pengendalian risiko.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-800 flex flex-wrap gap-1.5">
+                            <span class="px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 text-xs">JSA</span>
+                            <span class="px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 text-xs">Risk Matrix</span>
+                            <span class="px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 text-xs">K3 Observasi</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: AHP Supplier Selection -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-boxes-packing text-lg"></i>
+                            </div>
+
+                            <h4 class="text-lg font-bold text-white mb-2 leading-snug">
+                                Pemilihan Pemasok Menggunakan Analytical Hierarchy Process (AHP)
+                            </h4>
+
+                            <!-- Impact Highlight -->
+                            <div class="my-4 p-4 rounded-xl bg-slate-900 border border-slate-800 text-center">
+                                <span class="text-xs text-slate-400 font-medium block">Sistem Keputusan Supply Chain</span>
+                                <span class="text-xl font-bold text-emerald-400">Multi-Criteria AHP</span>
+                                <span class="text-[11px] text-slate-400 block mt-1">Pengambilan Keputusan Terstruktur</span>
+                            </div>
+
+                            <div class="space-y-2 text-xs sm:text-sm text-slate-300">
+                                <p><strong class="text-white">Konteks:</strong> Menganalisis alternatif pemilihian vendor/supplier optimal untuk rantai pasok perusahaan.</p>
+                                <p><strong class="text-white">Metode:</strong> Pembobotan kriteria dan perbandingan berpasangan menggunakan instrumen SpiceLogic AHP.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-800 flex flex-wrap gap-1.5">
+                            <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 text-xs">AHP</span>
+                            <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 text-xs">SpiceLogic</span>
+                            <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 text-xs">Supplier Evaluation</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications Section -->
+        <section id="certifications" class="py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+                    <!-- Education Column -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div>
+                            <h2 class="text-xs font-bold tracking-widest text-blue-400 uppercase">Latar Belakang</h2>
+                            <h3 class="text-2xl font-bold text-white mt-1">Pendidikan Formal</h3>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-blue-500 relative">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">S1 Teknik Industri</h4>
+                                    <p class="text-blue-300 text-sm font-medium">UPN "Veteran" Yogyakarta</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-800/60 text-xs font-bold">
+                                    IPK 3,38
+                                </span>
+                            </div>
+                            <p class="mt-4 text-xs text-slate-300 leading-relaxed">
+                                Kurikulum berfokus pada Perancangan Sistem Kerja, Ergonomi, Operasional Penelitian, Supply Chain Management, Sistem Produksi, dan Quality Control.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Column -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div>
+                            <h2 class="text-xs font-bold tracking-widest text-blue-400 uppercase">Kualifikasi Profesional</h2>
+                            <h3 class="text-2xl font-bold text-white mt-1">Sertifikasi &amp; Pelatihan Kompetensi</h3>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                            <!-- Certification 1: BNSP -->
+                            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/50 transition">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-8 h-8 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold text-xs">
+                                        BNSP
+                                    </div>
+                                    <h4 class="text-sm font-bold text-white">Sertifikasi BNSP</h4>
+                                </div>
+                                <p class="text-xs text-slate-300 font-medium">Perancangan Produk &amp; Proses Produksi</p>
+                                <span class="mt-2 inline-block text-[11px] text-slate-400">Badan Nasional Sertifikasi Profesi</span>
+                            </div>
+
+                            <!-- Certification 2: SAP Training -->
+                            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/50 transition">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-8 h-8 rounded-lg bg-cyan-600/20 text-cyan-400 flex items-center justify-center font-bold text-xs">
+                                        SAP
+                                    </div>
+                                    <h4 class="text-sm font-bold text-white">Pelatihan SAP ERP</h4>
+                                </div>
+                                <p class="text-xs text-slate-300 font-medium">Purchasing, Delivery, MRP &amp; Production Control</p>
+                                <span class="mt-2 inline-block text-[11px] text-slate-400">Integrasi Modul Operasional</span>
+                            </div>
+
+                            <!-- Certification 3: Supply Chain Management -->
+                            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/50 transition">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
+                                        SCM
+                                    </div>
+                                    <h4 class="text-sm font-bold text-white">Supply Chain Management</h4>
+                                </div>
+                                <p class="text-xs text-slate-300 font-medium">Pelatihan Manajemen Rantai Pasok &amp; Logistik</p>
+                                <span class="mt-2 inline-block text-[11px] text-slate-400">Pengendalian Aliran Material</span>
+                            </div>
+
+                            <!-- Certification 4: Excel Intermediate/Advanced -->
+                            <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/50 transition">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
+                                        XLS
+                                    </div>
+                                    <h4 class="text-sm font-bold text-white">Microsoft Excel Sertifikat</h4>
+                                </div>
+                                <p class="text-xs text-slate-300 font-medium">Pengolahan Data Intermediate / Advanced</p>
+                                <span class="mt-2 inline-block text-[11px] text-slate-400">Pengolahan Data Penjadwalan & Formula</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 sm:py-24 bg-slate-900/40 border-t border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center space-y-3 mb-12">
+                    <h2 class="text-xs font-bold tracking-widest text-blue-400 uppercase">Pemetaan Kompetensi</h2>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white">Keterampilan Teknis &amp; Alat Operasional</h3>
+                    <p class="text-slate-400 text-sm">Dikategorikan secara sistematis berdasarkan kebutuhan industri operasional manufaktur.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Category 1: Supply Chain & Operations -->
+                    <div class="glass-card p-6 rounded-2xl space-y-4">
+                        <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+                            <div class="w-9 h-9 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                            </div>
+                            <h4 class="text-base font-bold text-white">Supply Chain &amp; Operations</h4>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">Delivery Operations</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">Inventory Control</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">Material Handling</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">Kanban System</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">Production Planning &amp; Control (PPIC)</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">Logistics &amp; Distribution</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Data & Software -->
+                    <div class="glass-card p-6 rounded-2xl space-y-4">
+                        <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+                            <div class="w-9 h-9 rounded-lg bg-cyan-600/20 text-cyan-400 flex items-center justify-center">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <h4 class="text-base font-bold text-white">Data &amp; Software Tools</h4>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">Microsoft Excel</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">Warehouse Management System (WMS)</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">Microsoft PowerPoint</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">ProModel Simulation</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">IBM SPSS Statistics</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">SpiceLogic AHP</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Process Improvement -->
+                    <div class="glass-card p-6 rounded-2xl space-y-4">
+                        <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+                            <div class="w-9 h-9 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center">
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+                            <h4 class="text-base font-bold text-white">Process Improvement &amp; Quality</h4>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">Value Stream Mapping (VSM)</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">Job Safety Analysis (JSA)</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">PDCA Cycle</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">Basic Quality Analysis</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-slate-800/90 text-slate-200 text-xs font-medium border border-slate-700/60">5S Principles</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 sm:py-24 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <div class="max-w-4xl mx-auto glass-card p-8 sm:p-12 rounded-3xl border border-slate-700/60 shadow-2xl text-center space-y-8">
+                    <div class="space-y-3">
+                        <span class="px-3 py-1 rounded-full bg-blue-950 text-blue-300 text-xs font-bold border border-blue-800">Mari Berkolaborasi</span>
+                        <h3 class="text-2xl sm:text-4xl font-extrabold text-white">Siap Berkontribusi di Perusahaan Anda</h3>
+                        <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
+                            Terbuka untuk kesempatan kerja full-time, kontrak, maupun program development di area Manufaktur, Logistics, Supply Chain, dan PPIC.
+                        </p>
+                    </div>
+
+                    <!-- Contact Buttons Container -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+                        
+                        <!-- Email Card -->
+                        <a href="mailto:kikiprasetyadi21@gmail.com" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500 transition group flex flex-col justify-between">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="w-10 h-10 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-blue-400"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 font-medium block">Kirim Email</span>
+                                <span class="text-xs sm:text-sm font-bold text-white truncate block">kikiprasetyadi21@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <!-- WhatsApp / Phone Card -->
+                        <a href="https://wa.me/6281289683373" target="_blank" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-500 transition group flex flex-col justify-between">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-emerald-400"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 font-medium block">Telepon / WhatsApp</span>
+                                <span class="text-xs sm:text-sm font-bold text-white truncate block">+62 812-8968-3373</span>
+                            </div>
+                        </a>
+
+                        <!-- LinkedIn Card -->
+                        <a href="https://www.linkedin.com/in/kiki-prasetyadi" target="_blank" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-cyan-500 transition group flex flex-col justify-between">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="w-10 h-10 rounded-lg bg-cyan-600/20 text-cyan-400 flex items-center justify-center">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </div>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-cyan-400"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 font-medium block">Profil LinkedIn</span>
+                                <span class="text-xs sm:text-sm font-bold text-white truncate block">www.linkedin.com/in/kiki-prasetyadi</span>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <!-- Curriculum Vitae Action Banner -->
+                    <div class="pt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="text-left">
+                            <h4 class="text-sm font-bold text-white">Membutuhkan Berkas Kurikulum Vitae Lengkap?</h4>
+                            <p class="text-xs text-slate-400">Unduh ringkasan kualifikasi resmi format PDF standar rekruter.</p>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1Qjsb_dYyqA4EDDUMaII7WEEXhoZamP8j/view?usp=drive_link" target="_blank" download class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition shadow-lg shadow-blue-600/20 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-download"></i> Unduh CV Resmi (PDF)
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-8 text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                &copy; 2026 Portofolio Profesional Kiki Prasetyadi.
+            </div>
+            <div class="flex items-center gap-6 text-slate-400">
+                <a href="#about" class="hover:text-white transition">Tentang</a>
+                <a href="#experience" class="hover:text-white transition">Pengalaman</a>
+                <a href="#projects" class="hover:text-white transition">Proyek</a>
+                <a href="#contact" class="hover:text-white transition">Kontak</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Pure JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-xmark');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                }
+            });
+
+            // Close mobile menu upon clicking nav links
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
